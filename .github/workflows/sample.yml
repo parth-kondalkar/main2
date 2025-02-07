@@ -28,3 +28,20 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+  deploy: 
+    runs-on: ubuntu-latest
+    environment:
+      name: pass
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Upload text file artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: text-file-artifact
+          path: .
