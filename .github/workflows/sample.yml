@@ -13,16 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Create a text file
-        run: |
-          echo "This is a sample text file" > ./path/to/your/build/directory/sample.txt
-          
       - name: Upload text file artifact
         uses: actions/upload-artifact@v4
         with:
           name: text-file-artifact
-          path: ./path/to/your/build/directory/sample.txt
+          path: .
 
   test:
     needs: build
