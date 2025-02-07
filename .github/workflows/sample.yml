@@ -13,7 +13,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   # schedule:
-   # - cron: '0 0 * * *'
+  #   - cron: '0 0 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,8 +42,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: https://github.com/parth-kondalkar/main2/edit/main/.github
-          
+          path: ./path/to/your/build/directory   # Adjust this to the correct directory path
+
   test:
     needs: build
     # The type of runner that the job will run on
