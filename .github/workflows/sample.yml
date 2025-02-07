@@ -36,6 +36,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      # Upload artifact
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: https://github.com/parth-kondalkar/main2/edit/main/.github
+          
   test:
     needs: build
     # The type of runner that the job will run on
