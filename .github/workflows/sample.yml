@@ -36,6 +36,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          touch ./path/to/your/build/directory/123.txt
           
       # Upload artifact (Updated to v4)
       - name: Upload build artifacts
