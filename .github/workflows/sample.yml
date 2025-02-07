@@ -37,9 +37,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      # Upload artifact
+      # Upload artifact (Updated to v4)
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
           path: ./path/to/your/build/directory   # Adjust this to the correct directory path
